@@ -5,7 +5,7 @@ services:
     image: php:8.3-fpm
     container_name: php
     volumes:
-      - ../todo-list-app:/var/www/html
+      - ../degustabox-time-traker:/var/www/html
     depends_on:
       - db
     command: >
@@ -28,7 +28,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ../todo-list-app:/var/www/html
+      - ../degustabox-time-traker:/var/www/html
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - php
